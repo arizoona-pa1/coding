@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="coding.css">
+  </head>
+  <body>
+    <div class="input" style="margin: 50px; width:400px;"></div>
+    <div class="input" style="margin: 50px; width:400px;"></div>
+    <div class="input" style="margin: 50px; width:400px;"></div>
+    <div class="input" style="margin: 50px; width:400px;"></div>
+    <div class="input" style="margin: 50px; width:400px;"></div>
+    <div class="input" style="margin: 50px; width:400px;"></div>
+    <div class="input" style="margin: 50px; width:400px;"></div>
+    <div class="input" style="margin: 50px; width:400px;"></div>
+    <script src="./coding.js"></script>
+    <script>
+      const template_inputs = document.querySelectorAll(`.input`);
+      template_inputs.forEach((temp, index) => {
+        const input_v = app.forms.input.clone(
+          {
+            id: "basic",
+            name: "basic",
+            type: "text",
+            value: "",
+            placeholder: "placeholder",
+            label: "phone number",
+            // icon: '<i class="fa-solid fa-phone"></i>',
+            // iconSide: "reverse",
+            // text_gp_left: "<label for='upload''>choose file</label>", // optional
+            // text_gp_left: "upload file", // optional
+            // text_gp_right: "@gmail.com", // optional
+            // direction:'rtl',
+            // attributes: "required disabled",
+            // textError:
+            //   '<i class="fa-regular fa-circle-exclamation"></i><br>required max_length="100"',
+            style: {
+              height: "55px",
+              //   dark_color: "red",
+              // dark_bgColor: "default_none", // optional
+              // dark_bgColor_disabled: "default_none", // optional
+              // dark_bgColor_text_gp: "default_none", // optional
+              // dark_border_color: "default_none", // optional
+              // dark_border_color_filled: "default_none", // optional
+            },
+          },
+          index
+        );
+        temp.append(input_v);
+      });
+    </script>
+  </body>
+</html>
